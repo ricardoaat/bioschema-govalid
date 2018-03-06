@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "oneOf": [
+        {"type": "string"},
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      ]
+    },
+    "startDate": {
+      "oneOf": [
+        {"type": "string"}
+      ]
+    },
+    "endDate": {
+      "oneOf": [
+        {"type": "string"}
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {"type": "string"},
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      ]
+    }
+  },
+  "required": [
+    "startDate",
+    "endDate",
+    "name"
+  ],
+  "recommended": [
+    "url",
+    "keywords",
+    "topic",
+    "targetAudience",
+    "programme",
+    "deadline",
+    "prerequisite",
+    "capacity",
+    "eligibility",
+    "alternateName",
+    "accreditation"
+  ]
+}

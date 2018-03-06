@@ -1,0 +1,15 @@
+[Process]
+Backup = false 
+
+[Path]
+LogPath = "log/"
+ResultReport = "destination/"
+CsvResources = "output/done/"
+SFTPDest = "/var/tmp/leuser/"
+
+[SFTP]
+Host = "127.0.0.1"
+Port = "22"
+User = "leuser"
+Pass = "leuser"
+

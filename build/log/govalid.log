@@ -1,0 +1,16 @@
+{"level":"info","msg":"--------------Init program--------------","time":"2018-03-06T17:53:45Z"}
+{"level":"info","msg":"Version:  Build Date: ","time":"2018-03-06T17:53:45Z"}
+{"level":"info","msg":"Loaded configuration {{false} {log/ destination/ output/done/ /var/tmp/rarcila/} {[ricardo.arcila@i-new.com] } {10.216.1.63 22 root inewadm} map[scarlet:{[[732111272000000 732111272999999]]} ronin:{[[732111271000000 732111271999999]]} uff:{[[732111218000000 732111219999999] [732103018000000 732103019999999] [732103023713000 732103023761999]]} dime:{[[732111273000000 732111273999999]]}]}","time":"2018-03-06T17:53:45Z"}
+{"level":"info","msg":"\u0026{0x108fa90 event.json}","time":"2018-03-06T17:53:45Z"}
+{"level":"info","msg":"--------------Init program--------------","time":"2018-03-06T17:57:16Z"}
+{"level":"info","msg":"Version:  Build Date: ","time":"2018-03-06T17:57:16Z"}
+{"level":"info","msg":"Loaded configuration {{false} {log/ destination/ output/done/ /var/tmp/rarcila/} {[ricardo.arcila@i-new.com] } {10.216.1.63 22 root inewadm} map[scarlet:{[[732111272000000 732111272999999]]} ronin:{[[732111271000000 732111271999999]]} uff:{[[732111218000000 732111219999999] [732103018000000 732103019999999] [732103023713000 732103023761999]]} dime:{[[732111273000000 732111273999999]]}]}","time":"2018-03-06T17:57:16Z"}
+{"level":"info","msg":"\u0026{0x108fa90 file://event.json}","time":"2018-03-06T17:57:16Z"}
+{"level":"info","msg":"--------------Init program--------------","time":"2018-03-06T18:02:29Z"}
+{"level":"info","msg":"Version:  Build Date: ","time":"2018-03-06T18:02:29Z"}
+{"level":"info","msg":"Loaded configuration {{false} {log/ destination/ output/done/ /var/tmp/rarcila/} {[ricardo.arcila@i-new.com] } {10.216.1.63 22 root inewadm} map[uff:{[[732111218000000 732111219999999] [732103018000000 732103019999999] [732103023713000 732103023761999]]} dime:{[[732111273000000 732111273999999]]} scarlet:{[[732111272000000 732111272999999]]} ronin:{[[732111271000000 732111271999999]]}]}","time":"2018-03-06T18:02:29Z"}
+{"level":"info","msg":"\u0026{0x108fa90 file:///Users/arcila/ebi/dev/bioschemas-govalid/build/event.json}","time":"2018-03-06T18:02:29Z"}
+{"level":"info","msg":"--------------Init program--------------","time":"2018-03-06T20:39:22Z"}
+{"level":"info","msg":"Version:  Build Date: ","time":"2018-03-06T20:39:22Z"}
+{"level":"info","msg":"Loaded configuration {{false} {log/ destination/ output/done/ /var/tmp/leuser/} {127.0.0.1 22 leuser leuser}}","time":"2018-03-06T20:39:22Z"}
+{"level":"info","msg":"\u0026{0x108fa90 file:///Users/arcila/ebi/dev/bioschemas-govalid/build/event.json}","time":"2018-03-06T20:39:22Z"}
