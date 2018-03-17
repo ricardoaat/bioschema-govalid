@@ -23,7 +23,7 @@ func logInit() {
 	logfile := config.Conf.Path.LogPath + "govalid.log"
 	fmt.Println("Loging to " + logfile)
 	log.SetOutput(os.Stdout)
-	log.SetLevel(log.InfoLevel)
+	log.SetLevel(log.DebugLevel)
 	log.SetFormatter(&log.TextFormatter{})
 	pathMap := lfshook.PathMap{
 		log.DebugLevel: logfile,
@@ -48,10 +48,14 @@ func main() {
 
 	log.Info("--------------Init program--------------")
 	log.Info(fmt.Sprintf("Version: %s Build Date: %s", version, buildDate))
-	log.Info("Loaded configuration " + fmt.Sprint(config.Conf))
+	log.Debug("Loaded configuration " + fmt.Sprint(config.Conf))
 	v := flag.Bool("v", false, "Returns the binary version and built date info")
+	f := flag.String("f", "", "File path to Bioschemas CSV file to parse")
+	u := flag.String("u", "", "Url Path to Bioschemas CSV info to parse")
+
 	flag.Parse()
+
 	if !*v {
-		validator.Validate()
+		validator.Validate(*f, *u)
 	}
 }

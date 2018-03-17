@@ -1,0 +1,40 @@
+schema.org,,,bioschemas,,,
+Property,Expected Type,Description,BSC Description,Marginality,Cardinality,Controlled Vocabulary
+additionalType,URL,"An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.","Any ontology term describing the protein concept. This is in addition to the official type to describe a protein
+
+Official proposed term for the type describing a protein: http://purl.obolibrary.org/obo/PR_000000001",Optional,MANY,"SIO, PR, SO, others"
+alternateName,Text,An alias for the item.,_,Optional,MANY,
+description,Text,A description of the item.,"Protein function. We recommend to start the description with ""Function: [...]""",Recommended,ONE,
+identifier,"PropertyValue or 
+ Text or 
+ URL","The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",_,Minimum,ONE,
+image,"ImageObject or 
+ URL",An image of the item. This can be a URL or a fully described ImageObject.,_,Recommended,MANY,
+mainEntityOfPage,CreativeWork  or URL ,"Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.
+Inverse property: mainEntity",Link via Record or URL to the main Record representing this entity in a dataset,Optional,ONE,
+name,Text,The name of the item.,_,Minimum,ONE,
+sameAs,URL,"URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+
+Bioschemas usage. 
+
+Link to any resource other than the Record and the official Webpage, for instance a Wikipedia page.",_,Optional,MANY,
+url,URL,URL of the item.,Link to the official webpage associated to this entity.,Recommended,ONE,
+additionalProperty,PropertyValue,"A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.","Additional to the use of name and description to describe this property in a human-readable way, additionalType should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983 as additionalType for the additionalProperty.
+
+If appropriate terms/properties exist in controlled vocabularies, those should be used directly as third-party terms/properties.",Optional,MANY,
+http://purl.obolibrary.org/obo/so#associated_with,MedicalContidion or URL,,"Disease associated to this protein, if any.",Recommended,MANY,"SIO:000983, SIO:010299, OMIM, any other well-known ontology describing diseases"
+http://semanticscience.org/resource/SIO_010081.rdf,"BioChemEntity, bioschemas:Gene or URL",,"Gene(s) from which this protein was transcribed from. In addtion to the schema:BioChemEntity type, this property also expects a bioschemas:Gene profile.",Recommended,MANY,"SIO:010081, SIO:010035"
+isContainedIn,BioChemEntity or URL,,"Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.
+
+For proteins, it is recommended to at least specify the taxon/organism associated to the described protein; in this case the expected range would be a taxon id such as those in NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is optional; in that case, the expected range would be a GO Cellular Location term.",Recommended,MANY,"NCBI Taxon, UniProt taxonomy"
+contains,BioChemEntity or URL,,"Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn.
+
+",Optional,MANY,
+location,"Place, PostalAddress, PropertyValue, Text or URL","The location of for example where the event is happening, an organization is located, or where an action takes place.","In Bioschemas location can be refer to a position in a chromosome or sequence or to a physical place where, for instance, a sample is stored. Using additionalType is advised to make the distinction. For instance, FALDO can be used for sequence coordinates.",Optional,MANY,"Yes, as it better suits to describe the location."
+hasRepresentation,"PropertyValue, Text or URL",,"A representation for this entity other than, for instance, an image (used image property for that) or the main web page/record (use mainEntityOfPage for that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground, for sameAs and url).
+
+For proteins, this property could be used, for instance, to register a sequence protein as a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in additionalProperty or a third-party ontology predicate",Optional,MANY,"Yes, as it better suits to describe the nature of the representation"
+ http://purl.obolibrary.org/obo/RO_0002327,"Text, URL",,GO molecular function enabled by the protein,Optional,MANY,
+ http://purl.obolibrary.org/obo/RO_0002331,"Text, URL",,GO biological process this protein is involved in,Optional,MANY,

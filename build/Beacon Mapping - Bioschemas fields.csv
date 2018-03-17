@@ -1,0 +1,18 @@
+schema.org,,,bioschemas,,,
+Property,Expected Type,Description,BSC Description,MG,CN,CV
+dataset,Dataset,"A dataset contained in this catalog.
+Inverse property: includedInDataCatalog.",Dataset(s) served by this Beacon,Minimum,MANY,
+provider,"Organization or 
+Person","The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",Contact information for this Beacon,Minimum,MANY,
+version,"Number or 
+Text",The version of the CreativeWork embodied by a specified resource.,Beacon API version number,Recommended,ONE,
+description,Text,A description of the item.,Description of this Beacon,Recommended,ONE,
+identifier,"PropertyValue or 
+Text or 
+URL","The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",identifier,Recommended,ONE,
+name,Text,The name of the item.,Name of this Beacon,Minimum,ONE,
+potentialAction,Action,"Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",List of Actions that can be performed on this Beacon,Minimum,MANY,
+sameAs,URL,"URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",Alternative URL for this Beacon,Optional,MANY,
+url,URL,URL of the item.,Welcome Page of this Beacon,Minimum,ONE,
+supportedReference,citation,"A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",Supported Genome ID references,Minimum,MANY,
+aggregator,Boolean,,True if Beacon is an agregator of other Beacon Datasets,Recommended,ONE,
